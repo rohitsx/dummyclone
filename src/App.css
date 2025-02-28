@@ -1,0 +1,283 @@
+/* App.css */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app-container {
+  font-family: "Inter", sans-serif;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.background-gradient {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #7b5fac 0%, #4b6cb7 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.background-gradient::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+      circle at 70% 20%,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0) 50%
+    ),
+    radial-gradient(
+      circle at 30% 50%,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0) 50%
+    );
+  z-index: 0;
+}
+
+.content-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logo-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  width: 180px;
+  height: 180px;
+  margin-bottom: 30px;
+}
+
+.logo-item {
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.logo-item-1 {
+  background-color: #2a1b58;
+  border-radius: 12px;
+}
+
+.logo-item-2 {
+  background-color: #000;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+
+.logo-item-3 {
+  background-color: #670f7f;
+  border-radius: 50%;
+}
+
+.logo-item-4 {
+  background-color: #b40f86;
+  border-radius: 12px;
+  transform: rotate(45deg);
+}
+
+.text-content {
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+}
+
+.title {
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.date {
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.notification-text {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.email-form {
+  display: flex;
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.email-input {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+.email-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.notify-button {
+  padding: 12px 24px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.notify-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.footer {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  padding: 0 20px;
+}
+
+.link {
+  color: white;
+  text-decoration: underline;
+}
+
+.mini-logo {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2px;
+  width: 60px;
+  height: 60px;
+}
+
+.mini-logo-item {
+  background-color: #000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.mini-logo-item-1 {
+  background-color: #2a1b58;
+  border-radius: 4px;
+}
+
+.mini-logo-item-2 {
+  background-color: #000;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+
+.mini-logo-item-3 {
+  background-color: #670f7f;
+  border-radius: 50%;
+}
+
+.mini-logo-item-4 {
+  background-color: #b40f86;
+  border-radius: 4px;
+  transform: rotate(45deg);
+}
+
+.status-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 24px;
+  background-color: #000;
+  color: #00ff00;
+  display: flex;
+  align-items: center;
+  font-family: monospace;
+  font-size: 12px;
+  padding: 0 4px;
+}
+
+.status-item {
+  margin-right: 8px;
+  border: 1px solid #333;
+  padding: 0 4px;
+}
+
+.status-progress {
+  margin-right: 8px;
+  margin-left: auto;
+}
+
+.status-info {
+  color: #888;
+  font-size: 11px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .title {
+    font-size: 48px;
+  }
+
+  .date {
+    font-size: 28px;
+  }
+
+  .logo-container {
+    width: 140px;
+    height: 140px;
+  }
+
+  .email-form {
+    flex-direction: column;
+  }
+
+  .content-container {
+    padding: 80px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 36px;
+  }
+
+  .date {
+    font-size: 22px;
+  }
+
+  .logo-container {
+    width: 100px;
+    height: 100px;
+  }
+}
